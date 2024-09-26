@@ -16,17 +16,21 @@ pub fn bigger(a: i32, b: i32) -> i32 {
     }
 }
 
+fn main(){
+
+}
+
 // Don't mind this for now :)
 #[cfg(test)]
 mod tests {
     use super::*;
 
-    #[test]
+    #[test1]
     fn ten_is_bigger_than_eight() {
         assert_eq!(10, bigger(10, 8));
     }
 
-    #[test]
+    #[test2]
     fn fortytwo_is_bigger_than_thirtytwo() {
         assert_eq!(42, bigger(32, 42));
     }
