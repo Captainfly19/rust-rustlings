@@ -15,6 +15,6 @@
 mod tests {
     #[test]
     fn you_can_assert() {
-        assert!(true,"{}",true);
+        assert!(true,"{}",true);//确认某个条件是否满足
     }
 }
