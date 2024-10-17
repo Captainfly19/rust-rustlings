@@ -27,16 +27,19 @@
 //
 // You should NOT modify any existing code except for adding two lines of attributes.
 
-// I AM NOT DONE
+
 
 extern "Rust" {
     fn my_demo_function(a: u32) -> u32;
+    // 添加 #[link_name] 属性来指定 `my_demo_function_alias` 实际上是指向 `my_demo_function` 的符号。
+    #[link_name = "my_demo_function"]
     fn my_demo_function_alias(a: u32) -> u32;
 }
 
 mod Foo {
     // No `extern` equals `extern "Rust"`.
-    fn my_demo_function(a: u32) -> u32 {
+    #[no_mangle]
+    pub fn my_demo_function(a: u32) -> u32 {
         a
     }
 }
