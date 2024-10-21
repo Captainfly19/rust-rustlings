@@ -28,7 +28,7 @@ struct LinkedList<T> {
     end: Option<NonNull<Node<T>>>,
 }
 
-impl<T: std::cmp::PartialOrd + Clone > Default for LinkedList<T> {
+impl<T: std::cmp::PartialOrd + Clone> Default for LinkedList<T> {
     fn default() -> Self {
         Self::new()
     }

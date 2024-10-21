@@ -76,12 +76,12 @@ impl<T> myStack<T> {
         if self.q1.is_empty(){
             return Err("Stack is empty")
         }
-        while self.q1.size()>1{
+        while self.q1.size()>1 {
             if let Ok(x) = self.q1.dequeue(){
                 self.q2.enqueue(x);
             }
         }
-        if let Ok(tar) = self.q1.dequeue(){
+        if let Ok(tar) = self.q1.dequeue() {
             mem::swap(&mut self.q1,&mut self.q2);
             Ok(tar)
         } else {
